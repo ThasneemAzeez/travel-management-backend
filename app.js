@@ -14,6 +14,16 @@ app.post("/add",(req,res)=>{
     console.log(input)
 })
 
+app.get("/view",(req,res)=>{
+    travelmodel.find().then(
+        (data)=>{
+            res.json(data)
+        }
+    ).catch((error)=>{
+        res.json(error)
+    })
+})
+
 app.listen(8080,()=>{
     console.log("server started")
 })

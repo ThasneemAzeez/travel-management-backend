@@ -11,10 +11,10 @@ const Scheema = mongoose.mongoose.Schema(
         "modeoftransport":{type:String,required:true},
         "destination":{type:String,required:true},
         "boarding":{type:String,required:true},
-        "date":{type:Date,required:true},
+        "date":{type:String,required:true},
         
     }
 )
 
-let travelmodel = mongoose.model("travels",scheema);
+let travelmodel = mongoose.model("travels",Scheema);
 module.exports={travelmodel}
